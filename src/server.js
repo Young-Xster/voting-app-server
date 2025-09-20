@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export function startServer(store) {
   const PORT = process.env.PORT || 8090;
-  
+
   const io = new Server(PORT, {
     cors: {
       origin: [
@@ -11,9 +11,10 @@ export function startServer(store) {
         "http://localhost:5174",
         "http://localhost:3000",
         "https://votingrooms.netlify.app",
+        "https://votingapp.me",
         "https://*.netlify.app",
         "https://*.vercel.app",
-        process.env.FRONTEND_URL || "*"
+        process.env.FRONTEND_URL || "*",
       ],
       methods: ["GET", "POST"],
       credentials: true,
@@ -25,7 +26,7 @@ export function startServer(store) {
   // Track which users are in which rooms and their userNames
   const userRooms = {};
   const socketUsers = {}; // Track userName by socket.id
-  
+
   store.subscribe(() => {
     const state = store.getState();
     const rooms = state.get("rooms");
