@@ -7,7 +7,7 @@ import {
   vote,
   setEntries,
   INITIAL_STATE,
-} from "./core";
+} from "./core.js";
 
 export default function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {

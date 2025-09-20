@@ -1,5 +1,5 @@
-import makeStore from "./src/store";
-import { startServer } from "./src/server";
+import makeStore from "./src/store.js";
+import { startServer } from "./src/server.js";
 import { v4 as uuidv4 } from "uuid";
 
 export const store = makeStore();
