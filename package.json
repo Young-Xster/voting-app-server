@@ -12,11 +12,17 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "keywords": ["voting", "realtime", "socket.io", "websocket"],
+  "keywords": [
+    "voting",
+    "realtime",
+    "socket.io",
+    "websocket"
+  ],
   "author": "Young-Xster",
   "license": "MIT",
   "dependencies": {
     "immutable": "^4.3.4",
+    "redux": "^5.0.1",
     "socket.io": "^4.8.1",
     "uuid": "^9.0.1"
   },
